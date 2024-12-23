@@ -1,0 +1,58 @@
+@PointClass base(PlayerClass) sequence(2) studio(models/player/subzero/subzero.mdl") = info_player_earthrealm : "Player Earthrealm Start" 
+[
+	target(target_destination) : "Target"
+	master(string) : "Master"
+]
+
+@PointClass base(PlayerClass) sequence(2) studio("models/player/scorpion/scorpion.mdl") = info_player_outworld : "Player Outworld Start" 
+[
+	target(target_destination) : "Target"
+	master(string) : "Master"
+]
+
+@PointClass base(Targetname) studio("models/flag.mdl") = object_flag: "Shinnok's Amulet"
+[
+	offset(integer) : "Vertical offset from player" : 52
+]
+
+
+@PointClass base(Targetname) studio("models/flag1.mdl") = object_flag_earthrealm: "Earthrealm's Kamidogu"
+[
+	offset(integer) : "Vertical offset from player" : 52
+]
+
+
+@PointClass base(Targetname) studio("models/flag2.mdl") = object_flag_outworld: "Outworld's Kamidogu"
+[
+	offset(integer) : "Offset" : 52
+]
+
+@SolidClass base(Targetx) = capture_team1: "Where Team 1 brings the Kamidogu"
+[
+    points(integer) : "Points" : 1
+]
+@SolidClass base(Targetx) = capture_team2: "Where Team 2 brings the Kamidogu"
+[
+    points(integer) : "Points" : 1
+	
+]
+
+@SolidClass base(Targetx) = flag_trigger: "Flag Reset Trigger"
+[
+]
+
+@SolidClass base(BaseTank, ZHLT) = func_tankrocket : "Brush Rocket Turret"
+[
+	classrocket(choices): 0 =
+	[
+		0: "None"
+		1: "Johnny Cage"
+		2: "Kano"
+		3: "Raiden"
+		4: "Liu Kang"
+		5: "Scorpion"
+		6: "Sub-Zero"
+		7: "Sonya"
+		8: "Reptile"
+	]
+] 
